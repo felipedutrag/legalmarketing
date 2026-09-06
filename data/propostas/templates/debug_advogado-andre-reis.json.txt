@@ -1,0 +1,31 @@
+### GERAL
+- Limpar/remover as alterações anteriores que já foram aplicadas.
+
+### HEADER
+- Corrigir os menus: substituir a opção "Sobre" por "Agendamento", e ajustar as respectivas âncoras (links internos).
+- Adicionar um novo menu "Sobre" que aponte para a seção localizada abaixo das "Áreas de Atuação".
+
+### MENUS
+- Substituir o texto "Áreas" por "Áreas de Atuação".
+
+### HERO
+- Substituir a imagem de background da seção Hero pela imagem localizada em `assets/hero.jpg`.
+
+### RESPONSIVIDADE E ESCALA (FIX)
+- Garantir que a interface (tamanhos de fonte, layout, elementos) seja exibida de forma consistente e idêntica, independentemente da escala de exibição configurada no sistema operacional do usuário (ex: Windows em 100%, 125%, 150%). Prevenir quebras de layout causadas por zoom do sistema.
+
+### PERGUNTAS E RESPOSTAS (F&Q)
+- Adicionar um efeito de abertura suave (transição/animação) ao expandir as respostas.
+- FIX: Impedir que a largura do elemento aumente ao abrir; o movimento deve ser apenas vertical.
+
+### CONTATO
+- Centralizar o título "Entre em Contato" e todos os textos relacionados a essa seção.
+
+### MODAL DE CONDIÇÃO ESPECIAL
+- Substituir o texto "Seu escritório digital está pronto" por "Faço o pagamento para concluir as edições de seu site e publicá-lo em até 3 dias.".
+
+### SEÇÃO FINAL
+- Remover o card de informações que fica na última dobra, logo acima do footer.
+
+### IMAGEM DA RECEPÇÃO
+- Colocar uma máscara na imagem da recepção.

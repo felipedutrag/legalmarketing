@@ -1,0 +1,340 @@
+TENTATIVA 1/3 (prompt completo)
+{
+  "nome": "Dra. Cleide Sobreira - Advogada Especialista",
+  "metaDescription": "Escritório especializado em Direito do Consumidor, Imobiliário e Civil. Atendimento ético, técnico e humanizado para proteger seus direitos.",
+  "hero": {
+    "tag": "Excelência e Dedicação Jurídica",
+    "titulo": "Defesa especializada e estratégica para os seus direitos",
+    "subtitulo": "Atuação focada em soluções seguras e transparentes nas áreas do Consumidor, Imobiliária e Civil.",
+    "bullets": [
+      "Atendimento personalizado e humanizado",
+      "Análise técnica detalhada do seu caso",
+      "Compromisso rigoroso com a ética da OAB"
+    ]
+  },
+  "sobre": {
+    "titulo": "Compromisso com a justiça e a segurança jurídica",
+    "paragrafo1": "O escritório da Dra. Cleide Sobreira é pautado pela excelência técnica, transparência e atendimento humanizado. Buscamos compreender profundamente a situação de cada cliente para oferecer o direcionamento jurídico mais adequado.",
+    "paragrafo2": "Nossa atuação une conhecimento aprofundado da legislação brasileira a uma postura ética rigorosa, visando sempre a resolução eficiente de conflitos e a preservação dos interesses de quem confia em nosso trabalho."
+  },
+  "areasTitulo": "Áreas de Atuação",
+  "areas": [
+    {
+      "icon": "scale-balanced",
+      "titulo": "Direito do Consumidor",
+      "descricao": "Proteção contra abusos em relações de consumo, cobranças indevidas e falhas na prestação de serviços."
+    },
+    {
+      "icon": "house",
+      "titulo": "Direito Imobiliário",
+      "descricao": "Assessoria em contratos, locações, compra e venda de imóveis e regularização patrimonial."
+    },
+    {
+      "icon": "building-columns",
+      "titulo": "Direito Condominial",
+      "descricao": "Solução de conflitos entre condôminos, análise de convenções e assessoria para síndicos."
+    },
+    {
+      "icon": "file-contract",
+      "titulo": "Direito Civil",
+      "descricao": "Elaboração de contratos, reparação de Danos materiais e morais e resolução de litígios."
+    }
+  ],
+  "equipe": {
+    "titulo": "Atuação especializada e centrada no cliente",
+    "paragrafo1": "Contamos com profissionais qualificados e dedicados a analisar cada caso com a atenção e o rigor técnico que ele exige.",
+    "paragrafo2": "Nosso método prioriza a clareza na comunicação, mantendo o cliente informado sobre cada etapa do andamento de sua demanda jurídica."
+  },
+  "faq": [
+    {
+      "pergunta": "Como posso iniciar o atendimento com o escritório?",
+      "resposta": "Você pode entrar em contato diretamente pelo nosso canal de atendimento via WhatsApp ou preencher o formulário em nosso site para agendar uma conversa inicial."
+    },
+    {
+      "pergunta": "Quais documentos devo separar para a primeira consulta?",
+      "resposta": "Recomendamos reunir documentos pessoais, contratos envolvidos, notificações, e-mails ou mensagens que comprovem a situação relatada."
+    },
+    {
+      "pergunta": "O escritório atende em quais localidades?",
+      "resposta": "Atendemos clientes em diversas regiões do Brasil, com atuação digital abrangente e suporte presencial conforme a necessidade da demanda."
+    },
+    {
+      "pergunta": "Quanto tempo demora para resolver um caso jurídico?",
+      "resposta": "O tempo de resolução varia conforme a complexidade da demanda, o volume de trabalho dos órgãos competentes e se haverá acordo ou processo judicial."
+    }
+  ],
+  "contato": {
+    "titulo": "Fale com nossa equipe",
+    "subtitulo": "Estamos prontos para ouvir o seu caso e orientar sobre os próximos passos.",
+    "endereco": "",
+    "telefone": "",
+    "email": "contato@cleidesobreira.com.br",
+    "horario": "Segunda a sexta, das 9h às 18h"
+  },
+  "footerDescricao": "Dra. Cleide Sobreira - Advocacia especializada com foco na defesa intransigente dos direitos de nossos clientes.",
+  "triagePlaceholderExamples": [
+    "Ex.: Comprei um produto que veio defeituoso e a loja se recusa a trocar.",
+    "Ex.: Meu contrato de aluguel possui cláusulas abusivas que preciso revisar.",
+    "Ex.: Há problemas graves de infiltração nas áreas comuns do condomínio.",
+    "Ex.: Sofri um prejuízo financeiro decorrente de uma cobrança indevida no banco.",
+    "Ex.: Preciso de auxílio para elaboração e revisão de um contrato particular."
+  ],
+  "aiTree": {
+    "Direito do Consumidor": {
+      "icon": "scale-balanced",
+      "question": "Qual é a principal situação que você está enfrentando?",
+      "options": [
+        { "label": "Produto com defeito ou não entregue", "value": "produto" },
+        { "label": "Cobrança indevida ou negativação", "value": "cobranca" },
+        { "label": "Problema com plano de saúde ou banco", "value": "servico" },
+        { "label": "Outro problema de consumo", "value": "outro" }
+      ],
+      "next": {
+        "produto": {
+          "question": "A compra foi realizada pela internet ou em loja física?",
+          "options": [
+            { "label": "Internet (E-commerce)", "value": "a" },
+            { "label": "Loja física", "value": "b" },
+            { "label": "Não lembro com precisão", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já tentou contato formal com a empresa para solução?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Possui nota fiscal ou comprovante de compra?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O valor do prejuízo é superior a um salário mínimo?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "cobranca": {
+          "question": "Seu nome foi negativado indevidamente nos órgãos de proteção ao crédito?",
+          "options": [
+            { "label": "Sim, fui negativado", "value": "a" },
+            { "label": "Apenas recebo ligações de cobrança", "value": "b" },
+            "c": { "label": "Houve desconto direto na conta", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você reconhece a origem dessa dívida?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "As ligações ocorrem em horários inadequados?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Possui o extrato bancário demonstrando o desconto?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "servico": {
+          "question": "Qual o setor da prestação de serviço em questão?",
+          "options": [
+            { "label": "Instituição Bancária", "value": "a" },
+            { "label": "Plano de Saúde", "value": "b" },
+            { "label": "Telecomunicações (Telefonia/Internet)", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Houve fraude ou empréstimo não solicitado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Trata-se de negativa de procedimento médico?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O serviço foi cancelado e continuou sendo cobrado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "outro": {
+          "question": "O dano sofrido gerou prejuízo financeiro direto?",
+          "options": [
+            { "label": "Sim, financeiro e moral", "value": "a" },
+            { "label": "Apenas aborrecimento", "value": "b" },
+            { "label": "Ainda não sei mensurar", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Possui provas documentais do ocorrido?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Tentou acordo administrativo?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O fato ocorreu há menos de 90 dias?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito Imobiliário": {
+      "icon": "house",
+      "question": "Qual é a sua principal necessidade no setor imobiliário?",
+      "options": [
+        { "label": "Problemas com contrato de aluguel", "value": "aluguel" },
+        { "label": "Atraso na entrega de imóvel comprado na planta", "value": "planta" },
+        { "label": "Regularização de escritura ou registro", "value": "regularizacao" },
+        { "label": "Despejo ou reintegração de posse", "value": "posse" }
+      ],
+      "next": {
+        "aluguel": {
+          "question": "Você é o locador (proprietário) ou o locatário (inquilino)?",
+          "options": [
+            { "label": "Locador (Proprietário)", "value": "a" },
+            { "label": "Locatário (Inquilino)", "value": "b" },
+            { "label": "Fiador", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há inadimplência nos pagamentos?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Recebeu pedido injustificado de desocupação?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Existe cobrança direcionada ao seu patrimônio?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "planta": {
+          "question": "Qual o principal motivo da insatisfação com a construtora?",
+          "options": [
+            { "label": "Atraso na entrega das chaves", "value": "a" },
+            { "label": "Cobrança de taxa de juros abusiva", "value": "b" },
+            { "label": "Desejo de distrato (cancelamento)", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O prazo de tolerância já foi ultrapassado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "O financiamento já foi aprovado com o banco?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "A construtora recusa a devolução dos valores?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "regularizacao": {
+          "question": "O imóvel possui escritura pública definitiva?",
+          "options": [
+            { "label": "Possui apenas contrato de gaveta", "value": "a" },
+            { "label": "Possui escritura mas falta registro em cartório", "value": "b" },
+            { "label": "Imóvel em inventário pendente", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Conhece o paradeiro do antigo proprietário?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Existem pendências de IPTU ou taxas?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Há acordo entre os herdeiros?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "posse": {
+          "question": "Qual é a urgência da situação?",
+          "options": [
+            { "label": "Urgente (risco iminente de desocupação)", "value": "a" },
+            { "label": "Conflito em andamento há meses", "value": "b" },
+            { "label": "Apenas consulta preventiva", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe ordem judicial expedida?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Possui documentos que comprovem a posse?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O imóvel é residencial ou comercial?", "options": [ { "label": "Residencial", "value": "sim" }, { "label": "Comercial", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito Condominial": {
+      "icon": "building-columns",
+      "question": "Qual é o foco principal do seu problema em condomínio?",
+      "options": [
+        { "label": "Cobrança de taxas condominiais em atraso", "value": "inadimplencia" },
+        { "label": "Conflitos entre vizinhos ou barulho excessivo", "value": "conflito" },
+        { "label": "Problemas estruturais nas áreas comuns", "value": "estrutural" },
+        { "label": "Questões de gestão e administração", "value": "gestao" }
+      ],
+      "next": {
+        "inadimplencia": {
+          "question": "Você atua como síndico(a) ou é condômino?",
+          "options": [
+            { "label": "Síndico(a) / Administradora", "value": "a" },
+            { "label": "Condômino cobrado", "value": "b" },
+            { "label": "Conselho fiscal", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "As taxas em atraso ultrapassam 3 meses?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Houve tentativa de acordo amigável?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "As contas do condomínio estão em dia?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "conflito": {
+          "question": "O conflito já foi levado formalmente à sindicância?",
+          "options": [
+            { "label": "Sim, com aplicação de multas", "value": "a" },
+            { "label": "Apenas reclamações verbais", "value": "b" },
+            { "label": "Ainda não reportei oficialmente", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "As multas foram pagas pelo infrator?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Possui registros de áudio, vídeo ou mensagens?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "A convenção do condomínio prevê regras claras?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "estrutural": {
+          "question": "O dano estrutural afeta a sua unidade privativa?",
+          "options": [
+            { "label": "Sim, infiltração vinda da área comum", "value": "a" },
+            { "label": "Problemas na fachada ou telhado", "value": "b" },
+            { "label": "Falhas em elevadores ou portaria", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe laudo técnico comprovando a origem?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "O síndico foi notificado por escrito?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Houve prejuízo de bens materiais?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "gestao": {
+          "question": "Qual é a principal dúvida na gestão do condomínio?",
+          "options": [
+            { "label": "Interpretação da convenção e regimento", "value": "a" },
+            { "label": "Legalidade de assembleias realizadas", "value": "b" },
+            { "label": "Prestação de contas da administração", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há necessidade de alteração de regras?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Houve quórum adequado na assembleia?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Foi solicitada auditoria independente?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito Civil": {
+      "icon": "file-contract",
+      "question": "Qual assunto da esfera cível melhor descreve sua demanda?",
+      "options": [
+        { "label": "Elaboração ou revisão de contratos particulares", "value": "contrato" },
+        { "label": "Reparação de danos (materiais ou morais)", "value": "danos" },
+        { "label": "Cobrança de dívidas entre particulares", "value": "divida" },
+        { "label": "Outro litígio cível", "value": "outro" }
+      ],
+      "next": {
+        "contrato": {
+          "question": "O contrato já foi assinado pelas partes?",
+          "options": [
+            { "label": "Sim, e há descumprimento", "value": "a" },
+            { "label": "Ainda está em fase de negociação", "value": "b" },
+            { "label": "Desejo rescindir antecipadamente", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe cláusula penal ou multa estipulada?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Envolve valores expressivos de patrimônio?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Há previsão de aviso prévio na rescisão?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "danos": {
+          "question": "Qual foi a origem do dano sofrido?",
+          "options": [
+            { "label": "Acidente ou falha na prestação de serviço", "value": "a" },
+            { "label": "Ofensa à honra ou imagem (moral)", "value": "b" },
+            { "label": "Prejuízo em bens materiais", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Possui boletim de ocorrência ou laudos?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "O fato foi exposto publicamente?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Tem orçamentos do valor do conserto/prejuízo?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "divida": {
+          "question": "A dívida está formalizada por escrito?",
+          "options": [
+            { "label": "Possui nota promissória ou cheque", "value": "a" },
+            { "label": "Apenas contrato particular ou mensagens", "value": "b" },
+            { "label": "Dívida verbal baseada na confiança", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O título já venceu há mais de 1 ano?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Existem comprovantes de transferência bancária?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Há testemunhas do empréstimo ou negócio?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "outro": {
+          "question": "Já existe processo judicial em andamento sobre o caso?",
+          "options": [
+            { "label": "Sim, há processo ativo", "value": "a" },
+            { "label": "Apenas notificação extrajudicial", "value": "b" },
+            { "label": "Nenhum procedimento iniciado", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Possui o número do processo para consulta?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Foi estipulado prazo para resposta?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Busca acordo amigável prévio?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    }
+  }
+}

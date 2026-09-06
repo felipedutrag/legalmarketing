@@ -1,0 +1,340 @@
+TENTATIVA 2/3 (prompt completo)
+{
+  "nome": "AC Advogados & Associados",
+  "metaDescription": "Assessoria jurídica especializada OAB/SP 398.125. Atendimento ético, transparente e focado na segurança dos seus direitos.",
+  "hero": {
+    "tag": "Excelência e Ética Jurídica",
+    "titulo": "Segurança e clareza para a defesa dos seus direitos",
+    "subtitulo": "Atuação jurídica pautada na transparência, rigor técnico e compromisso com a melhor solução para o seu caso.",
+    "bullets": [
+      "Atendimento humanizado e personalizado",
+      "Rigor técnico fundamentado na legislação",
+      "Transparência em todas as etapas do processo"
+    ]
+  },
+  "sobre": {
+    "titulo": "Compromisso com a justiça e a segurança jurídica",
+    "paragrafo1": "Fundado sob os mais altos padrões de ética e excelência profissional, o escritório AC Advogados & Associados (OAB/SP 398.125) oferece consultoria e representação jurídica com foco na resolução eficiente de conflitos e na proteção de interesses de nossos clientes.",
+    "paragrafo2": "Nossa abordagem une o profundo conhecimento técnico à escuta ativa, garantindo que cada cliente compreenda perfeitamente seus direitos e o cenário de sua demanda, sempre com total discrição e profissionalismo."
+  },
+  "areasTitulo": "Áreas de Atuação",
+  "areas": [
+    {
+      "icon": "scale-balanced",
+      "titulo": "Direito Cível",
+      "descricao": "Resolução de conflitos patrimoniais, contratuais e reparações civis com foco em segurança."
+    },
+    {
+      "icon": "users",
+      "titulo": "Direito de Família",
+      "descricao": "Orientação humanizada em questões familiares, divórcios, guardas e sucessões."
+    },
+    {
+      "icon": "briefcase",
+      "titulo": "Direito Trabalhista",
+      "descricao": "Defesa rigorosa de direitos e obrigações nas relações de trabalho, para empregados e empresas."
+    },
+    {
+      "icon": "file-contract",
+      "titulo": "Contratos e Obrigações",
+      "descricao": "Elaboração, revisão e análise de instrumentos contratuais para prevenção de riscos."
+    }
+  ],
+  "equipe": {
+    "titulo": "Atuação especializada e estratégica",
+    "paragrafo1": "Nosso corpo jurídico é liderado por profissionais qualificados e devidamente inscritos na OAB/SP, com constante atualização legislativa e jurisprudencial para entregar o melhor suporte técnico.",
+    "paragrafo2": "Acreditamos que a advocacia preventiva e o planejamento estratégico são os melhores caminhos para mitigar riscos e alcançar soluções céleres e equilibradas."
+  },
+  "faq": [
+    {
+      "pergunta": "Como posso agendar uma consulta com o escritório?",
+      "resposta": "Você pode iniciar o atendimento preenchendo nosso formulário de triagem rápida aqui no site ou entrar em contato diretamente pelos nossos canais oficiais de atendimento."
+    },
+    {
+      "pergunta": "Quais documentos devo separar para a primeira conversa?",
+      "resposta": "Recomendamos reunir documentos de identificação, comprovante de residência e todos os papéis, contratos ou mensagens relacionados ao seu caso específico."
+    },
+    {
+      "pergunta": "O escritório atende demandas de outras cidades ou estados?",
+      "resposta": "Sim, possuímos estrutura para atendimento digital e acompanhamento de processos em diversas localidades, conforme a viabilidade e a natureza da demanda."
+    },
+    {
+      "pergunta": "Como é definido o acompanhamento do meu caso?",
+      "resposta": "Após uma análise técnica inicial detalhada, apresentamos o diagnóstico jurídico, as vias de atuação possíveis e mantemos o cliente informado sobre cada movimentação relevante."
+    }
+  ],
+  "contato": {
+    "titulo": "Entre em Contato",
+    "subtitulo": "Converse com nossa equipe e tire suas dúvidas com segurança e total sigilo.",
+    "endereco": "São Paulo, SP",
+    "telefone": "",
+    "email": "contato@andersoncardosoadv.com.br",
+    "horario": "Segunda a sexta, das 9h às 18h"
+  },
+  "footerDescricao": "AC Advogados & Associados - OAB/SP 398.125. Ética, transparência e defesa intransigente de direitos.",
+  "triagePlaceholderExamples": [
+    "Ex.: Preciso de orientação sobre divisão de bens e guarda no divórcio",
+    "Ex.: Fui demitido e não recebi minhas verbas rescisórias corretamente",
+    "Ex.: Assinei um contrato comercial e a outra parte descumpriu prazos",
+    "Ex.: Preciso revisar um contrato de locação residencial antes de assinar",
+    "Ex.: Estou sofrendo cobranças indevidas e meu nome foi negativado"
+  ],
+  "aiTree": {
+    "Direito Cível": {
+      "icon": "scale-balanced",
+      "question": "Qual é a principal natureza da sua questão cível?",
+      "options": [
+        { "label": "Cobrança ou Dívida", "value": "cobranca" },
+        { "label": "Negativação Indevida", "value": "negativacao" },
+        { "label": "Problema com Contrato", "value": "contrato" },
+        { "label": "Indenização por Danos", "value": "indenizacao" }
+      ],
+      "next": {
+        "cobranca": {
+          "question": "Você já possui documentos comprobatórios da dívida?",
+          "options": [
+            { "label": "Sim, notas/recibos", "value": "a" },
+            { "label": "Apenas conversas/mensagens", "value": "b" },
+            { "label": "Não possuo documentos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe processo judicial em andamento sobre este caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Existe processo judicial em andamento sobre este caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Existe processo judicial em andamento sobre este caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "negativacao": {
+          "question": "Quando você tomou conhecimento dessa negativação?",
+          "options": [
+            { "label": "Há menos de 30 dias", "value": "a" },
+            { "label": "Entre 1 e 6 meses", "value": "b" },
+            "c": { "label": "Há mais de 6 meses", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você reconhece a origem da dívida original?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Você reconhece a origem da dívida original?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Você reconhece a origem da dívida original?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "contrato": {
+          "question": "O contrato em questão foi formalizado por escrito?",
+          "options": [
+            { "label": "Sim, assinado", "value": "a" },
+            { "label": "Apenas verbal ou e-mail", "value": "b" },
+            { "label": "Contrato padrão de adesão", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "A outra parte já foi notificada formalmente?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "A outra parte já foi notificada formalmente?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "A outra parte já foi notificada formalmente?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "indenizacao": {
+          "question": "Qual o tipo de dano sofrido?",
+          "options": [
+            { "label": "Dano Moral", "value": "a" },
+            { "label": "Dano Material / Prejuízo", "value": "b" },
+            { "label": "Ambos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você possui provas materiais ou testemunhas do ocorrido?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Você possui provas materiais ou testemunhas do ocorrido?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Você possui provas materiais ou testemunhas do ocorrido?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        }
+      }
+    },
+    "Direito de Família": {
+      "icon": "users",
+      "question": "Qual assunto familiar principal você precisa tratar?",
+      "options": [
+        { "label": "Divórcio / Separação", "value": "divorcio" },
+        { "label": "Guarda e Pensão Alimentícia", "value": "guarda" },
+        { "label": "Inventário e Partilha", "value": "inventario" },
+        { "label": "Regulamentação de Visitas", "value": "visitas" }
+      ],
+      "next": {
+        "divorcio": {
+          "question": "Existe acordo consensual entre o casal sobre o divórcio?",
+          "options": [
+            { "label": "Sim, há consenso", "value": "a" },
+            { "label": "Parcialmente", "value": "b" },
+            { "label": "Não há consenso", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existem filhos menores ou incapazes envolvidos?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Existem filhos menores ou incapazes envolvidos?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Existem filhos menores ou incapazes envolvidos?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "guarda": {
+          "question": "A questão da guarda e dos alimentos já foi discutida formalmente?",
+          "options": [
+            { "label": "Sim, provisoriamente", "value": "a" },
+            { "label": "Não, é a primeira vez", "value": "b" },
+            { "label": "Há descumprimento de acordo anterior", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há urgência na fixação ou revisão do valor?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Há urgência na fixação ou revisão do valor?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Há urgência na fixação ou revisão do valor?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "inventario": {
+          "question": "Todos os herdeiros estão de acordo quanto à partilha?",
+          "options": [
+            { "label": "Sim, consensual", "value": "a" },
+            { "label": "Há divergência entre herdeiros", "value": "b" },
+            { "label": "Ainda não conversamos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existem bens imóveis a serem partilhados?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Existem bens imóveis a serem partilhados?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Existem bens imóveis a serem partilhados?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "visitas": {
+          "question": "Como é a situação atual do convívio com os filhos?",
+          "options": [
+            { "label": "Visitas impedidas/dificultadas", "value": "a" },
+            { "label": "Sem acordo formal estabelecido", "value": "b" },
+            { "label": "Necessidade de alteração de regime", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe processo anterior em andamento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Existe processo anterior em andamento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Existe processo anterior em andamento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        }
+      }
+    },
+    "Direito Trabalhista": {
+      "icon": "briefcase",
+      "question": "Qual é a sua situação no âmbito trabalhista?",
+      "options": [
+        { "label": "Rescisão e Verbas Rescisórias", "value": "rescisao" },
+        { "label": "Horas Extras e Adicionais", "value": "horas" },
+        { "label": "Assédio ou Condição Degradante", "value": "assedio" },
+        { "label": "Defesa para Empresa / Empregador", "value": "empresa" }
+      ],
+      "next": {
+        "rescisao": {
+          "question": "O contrato de trabalho já foi encerrado?",
+          "options": [
+            { "label": "Sim, há menos de 2 anos", "value": "a" },
+            { "label": "Sim, há mais de 2 anos", "value": "b" },
+            { "label": "Ainda estou trabalhando", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você já assinou a homologação ou termo rescisório?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Você já assinou a homologação ou termo rescisório?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Você já assinou a homologação ou termo rescisório?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "horas": {
+          "question": "Como você controlava a sua jornada de trabalho?",
+          "options": [
+            { "label": "Folha de ponto oficial", "value": "a" },
+            { "label": "Controle informal / Mensagens", "value": "b" },
+            { "label": "Não havia controle de horário", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você possui cópias dos controles de ponto?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Você possui cópias dos controles de ponto?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Você possui cópias dos controles de ponto?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "assedio": {
+          "question": "Você possui provas ou testemunhas do ocorrido?",
+          "options": [
+            { "label": "Sim, provas materiais/áudio", "value": "a" },
+            { "label": "Apenas testemunhas", "value": "b" },
+            { "label": "Apenas relatos pessoais", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O fato foi reportado ao RH ou superiores?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "O fato foi reportado ao RH ou superiores?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "O fato foi reportado ao RH ou superiores?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "empresa": {
+          "question": "Qual a principal demanda jurídica da sua empresa?",
+          "options": [
+            { "label": "Contencioso / Reclamatória ativa", "value": "a" },
+            { "label": "Consultoria preventiva / Contratos", "value": "b" },
+            { "label": "Acordo coletivo ou rescisão em massa", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já existe audiência designada para o caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Já existe audiência designada para o caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Já existe audiência designada para o caso?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        }
+      }
+    },
+    "Contratos e Obrigações": {
+      "icon": "file-contract",
+      "question": "Qual é a sua necessidade em relação a contratos?",
+      "options": [
+        { "label": "Elaboração de Novo Contrato", "value": "elaboracao" },
+        { "label": "Revisão de Contrato Existente", "value": "revisao" },
+        { "label": "Rescisão ou Quebra de Contrato", "value": "rescisao" },
+        { "label": "Inadimplemento / Cobrança Contratual", "value": "inadimplemento" }
+      ],
+      "next": {
+        "elaboracao": {
+          "question": "Qual é o tipo de negócio ou relação do contrato?",
+          "options": [
+            { "label": "Prestação de Serviços", "value": "a" },
+            { "label": "Locação Comercial ou Residencial", "value": "b" },
+            { "label": "Parceria Comercial / Societária", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe urgência na assinatura deste instrumento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Existe urgência na assinatura deste instrumento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Existe urgência na assinatura deste instrumento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "revisao": {
+          "question": "Você identificou cláusulas abusivas ou desequilibradas?",
+          "options": [
+            { "label": "Sim, há multas excessivas", "value": "a" },
+            { "label": "Prazos ou reajustes desfavoráveis", "value": "b" },
+            { "label": "Preciso de análise geral de riscos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O contrato já foi assinado pelas partes?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "O contrato já foi assinado pelas partes?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "O contrato já foi assinado pelas partes?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "rescisao": {
+          "question": "Qual parte deseja rescindir o contrato?",
+          "options": [
+            { "label": "Eu desejo rescindir", "value": "a" },
+            { "label": "A outra parte notificou a rescisão", "value": "b" },
+            { "label": "Rescisão mútua sem acordo de multas", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há previsão de multa rescisória no documento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Há previsão de multa rescisória no documento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Há previsão de multa rescisória no documento?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        },
+        "inadimplemento": {
+          "question": "Qual foi a obrigação descumprida?",
+          "options": [
+            { "label": "Falta de pagamento de valores", "value": "a" },
+            { "label": "Atraso na entrega de produto/serviço", "value": "b" },
+            { "label": "Descumprimento de cláusula de exclusividade", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já foi feita alguma tentativa amigável de cobrança?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "b": { "question": "Já foi feita alguma tentativa amigável de cobrança?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] },
+            "c": { "question": "Já foi feita alguma tentativa amigável de cobrança?", "options": [{ "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" }] }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+TENTATIVA 1/3 (prompt completo)
+{
+  "nome": "Escritório de Advocacia Dra. Aline Calves",
+  "metaDescription": "Assessoria jurídica especializada e atendimento humanizado para empresas e famílias. Segurança e clareza para a tomada de decisões.",
+  "hero": {
+    "tag": "Excelência e Dedicação Jurídica",
+    "titulo": "Segurança jurídica e orientação estratégica para a defesa dos seus direitos",
+    "subtitulo": "Atuação técnica, ética e personalizada em demandas consultivas e contenciosas, com foco na tranquilidade e proteção dos interesses de nossos clientes.",
+    "bullets": [
+      "Atendimento humanizado e transparente",
+      "Estratégias alinhadas à legislação vigente",
+      "Rigor técnico em cada etapa do processo"
+    ]
+  },
+  "sobre": {
+    "titulo": "Compromisso com a ética, a transparência e a excelência técnica",
+    "paragrafo1": "O Escritório de Advocacia Dra. Aline Calves pauta sua atuação na busca constante por soluções jurídicas eficientes, unindo profundidade técnica e um atendimento próximo e humanizado. Acreditamos que cada caso possui particularidades que exigem atenção dedicada e estratégias sob medida.",
+    "paragrafo2": "Nossa missão é proporcionar clareza e segurança aos nossos clientes, orientando decisões cruciais tanto no âmbito preventivo quanto na resolução de conflitos, sempre respeitando rigorosamente os preceitos éticos da profissão."
+  },
+  "areasTitulo": "Áreas de Atuação",
+  "areas": [
+    {
+      "icon": "scale-balanced",
+      "titulo": "Direito Cível",
+      "descricao": "Resolução de conflitos patrimoniais, obrigações, contratos e reparação de Danos com foco em soluções seguras."
+    },
+    {
+      "icon": "users",
+      "titulo": "Direito de Família",
+      "descricao": "Amparo jurídico sensível e estratégico em questões de divórcio, guarda, pensão alimentícia e sucessões."
+    },
+    {
+      "icon": "briefcase",
+      "titulo": "Direito Empresarial",
+      "descricao": "Suporte jurídico consultivo e preventivo para empresas, contratos comerciais e segurança societária."
+    },
+    {
+      "icon": "file-contract",
+      "titulo": "Direito Trabalhista",
+      "descricao": "Orientação especializada para empregados e empregadores nas relações de trabalho e conformidade legal."
+    }
+  ],
+  "equipe": {
+    "titulo": "Atuação especializada e centrada nas necessidades do cliente",
+    "paragrafo1": "Contamos com profissionais qualificados e em constante atualização para atender às demandas mais complexas do mercado e da sociedade, garantindo uma visão ampla e estratégica de cada caso.",
+    "paragrafo2": "Nosso método de trabalho envolve escuta ativa, análise detalhada de riscos e planejamento fundamentado, visando sempre a melhor condução jurídica possível dentro da legalidade."
+  },
+  "faq": [
+    {
+      "pergunta": "Como posso agendar uma consulta com o escritório?",
+      "resposta": "O agendamento pode ser realizado de forma rápida através do nosso sistema de triagem online ou pelos canais de contato disponíveis no rodapé do site."
+    },
+    {
+      "pergunta": "Quais documentos devo levar para a primeira reunião?",
+      "resposta": "Recomendamos reunir todos os documentos relacionados ao seu caso, como contratos, notificações, e-mails, identificação pessoal e comprovantes pertinentes."
+    },
+    {
+      "pergunta": "O escritório atende demandas de outras cidades?",
+      "resposta": "Sim, possuímos estrutura para atendimento digital e acompanhamento de processos em diversas localidades, conforme a necessidade do cliente."
+    },
+    {
+      "pergunta": "Como é definido o acompanhamento do caso?",
+      "resposta": "Após a análise técnica inicial, apresentamos o panorama legal, os cenários possíveis e as etapas que serão seguidas no andamento da demanda."
+    }
+  ],
+  "contato": {
+    "titulo": "Entre em Contato",
+    "subtitulo": "Conte com nossa orientação jurídica especializada para o seu caso.",
+    "endereco": "Atendimento nacional via canais digitais e presenciais sob agendamento.",
+    "telefone": "",
+    "email": "contato@alinecalves.adv.br",
+    "horario": "Segunda a sexta-feira, das 9h às 18h."
+  },
+  "footerDescricao": "Escritório de Advocacia Dra. Aline Calves - Ética, técnica e dedicação na defesa dos seus direitos.",
+  "triagePlaceholderExamples": [
+    "Ex.: Preciso de orientação sobre a divisão de bens em um processo de divórcio consensual.",
+    "Ex.: Recebi uma cobrança indevida e preciso saber como resguardar meus direitos civis.",
+    "Ex.: Minha empresa precisa de revisão preventiva em contratos de prestação de serviços.",
+    "Ex.: Fui demitido e gostaria de entender meus direitos sobre as verbas rescisórias.",
+    "Ex.: Quero planejar a sucessão patrimonial da minha família de forma segura."
+  ],
+  "aiTree": {
+    "Direito Cível": {
+      "icon": "scale-balanced",
+      "question": "Qual é a natureza principal da sua questão cível no momento?",
+      "options": [
+        { "label": "Cobrança ou dívida pendente", "value": "cobranca" },
+        { "label": "Problema com contratos ou acordos", "value": "contrato" },
+        { "label": "Reparação por danos materiais ou morais", "value": "danos" },
+        { "label": "Outro litígio cível", "value": "outro" }
+      ],
+      "next": {
+        "cobranca": {
+          "question": "Existe algum documento formal comprovando essa dívida?",
+          "options": [
+            { "label": "Sim, contrato ou nota promissória", "value": "a" },
+            { "label": "Apenas conversas e mensagens", "value": "b" },
+            { "label": "Não possuo documentos escritos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Essa dívida já foi formalmente cobrada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Essa dívida já foi formalmente cobrada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Essa dívida já foi formalmente cobrada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "contrato": {
+          "question": "O contrato em questão possui cláusula de multa por rescisão?",
+          "options": [
+            { "label": "Sim, possui", "value": "a" },
+            { "label": "Não possui", "value": "b" },
+            { "label": "Não tenho certeza", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "A outra parte já descumpriu alguma cláusula?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "A outra parte já descumpriu alguma cláusula?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "A outra parte já descumpriu alguma cláusula?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "danos": {
+          "question": "Você possui provas materiais ou testemunhas do ocorrido?",
+          "options": [
+            { "label": "Sim, muitas provas", "value": "a" },
+            { "label": "Apenas algumas evidências", "value": "b" },
+            { "label": "Ainda preciso reunir provas", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O fato ocorreu há menos de um ano?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "O fato ocorreu há menos de um ano?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O fato ocorreu há menos de um ano?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "outro": {
+          "question": "Existe algum prazo estipulado por cartório ou juiz para este caso?",
+          "options": [
+            { "label": "Sim, prazo curto em vigor", "value": "a" },
+            { "label": "Não há prazo urgente", "value": "b" },
+            "c": { "label": "Não sei informar", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já existe advogado constituído na causa?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Já existe advogado constituído na causa?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Já existe advogado constituído na causa?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito de Família": {
+      "icon": "users",
+      "question": "Qual é a principal questão familiar que você precisa resolver?",
+      "options": [
+        { "label": "Divórcio ou separação", "value": "divorcio" },
+        { "label": "Guarda e convivência de filhos", "value": "guarda" },
+        { "label": "Pensão alimentícia", "value": "pensao" },
+        { "label": "Inventário ou partilha de bens", "value": "inventario" }
+      ],
+      "next": {
+        "divorcio": {
+          "question": "Existe acordo consensual entre o casal sobre os termos?",
+          "options": [
+            { "label": "Sim, há total consenso", "value": "a" },
+            { "label": "Parcialmente em acordo", "value": "b" },
+            { "label": "Não há acordo, é litigioso", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existem filhos menores de idade envolvidos?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Existem filhos menores de idade envolvidos?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Existem filhos menores de idade envolvidos?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "guarda": {
+          "question": "Como é a atual rotina de convivência com os filhos?",
+          "options": [
+            { "label": "Ambos convivem pacificamente", "value": "a" },
+            { "label": "Há conflitos para visitar", "value": "b" },
+            { "label": "Um dos pais impede o contato", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já existe definição judicial prévia de guarda?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Já existe definição judicial prévia de guarda?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Já existe definição judicial prévia de guarda?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "pensao": {
+          "question": "Qual é a situação atual do pagamento da pensão?",
+          "options": [
+            { "label": "Nunca foi fixada formalmente", "value": "a" },
+            { "label": "Está em atraso", "value": "b" },
+            { "label": "Precisa ser revista/revisada", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe acordo verbal ou informal atualmente?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Existe acordo verbal ou informal atualmente?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Existe acordo verbal ou informal atualmente?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "inventario": {
+          "question": "O falecimento ocorreu há quanto tempo?",
+          "options": [
+            { "label": "Há menos de 2 meses", "value": "a" },
+            { "label": "Entre 2 meses e 1 ano", "value": "b" },
+            { "label": "Há mais de 1 ano", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Os herdeiros estão de acordo quanto à partilha?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Os herdeiros estão de acordo quanto à partilha?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Os herdeiros estão de acordo quanto à partilha?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito Empresarial": {
+      "icon": "briefcase",
+      "question": "Qual é a principal necessidade da sua empresa no momento?",
+      "options": [
+        { "label": "Elaboração ou revisão de contratos", "value": "contratos" },
+        { "label": "Prevenção e solução de litígios societários", "value": "societario" },
+        { "label": "Cobrança de clientes inadimplentes", "value": "cobranca" },
+        { "label": "Consultoria jurídica preventiva geral", "value": "consultoria" }
+      ],
+      "next": {
+        "contratos": {
+          "question": "Que tipo de contrato comercial precisa de atenção?",
+          "options": [
+            { "label": "Prestação de serviços", "value": "a" },
+            { "label": "Parceria ou sociedade", "value": "b" },
+            { "label": "Locação comercial", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "A outra parte já apresentou uma minuta própria?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "A outra parte já apresentou uma minuta própria?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "A outra parte já apresentou uma minuta própria?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "societario": {
+          "question": "Qual é a estrutura societária atual do negócio?",
+          "options": [
+            { "label": "Sociedade Limitada (Ltda)", "value": "a" },
+            { "label": "Empresário Individual / EIRELI", "value": "b" },
+            { "label": "Outro formato societário", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Existe acordo de quotistas formalizado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Existe acordo de quotistas formalizado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Existe acordo de quotistas formalizado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "cobranca": {
+          "question": "Qual é o volume aproximado de títulos em atraso?",
+          "options": [
+            { "label": "Até 5 títulos", "value": "a" },
+            { "label": "Entre 6 e 20 títulos", "value": "b" },
+            { "label": "Mais de 20 títulos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Os devedores são pessoas físicas ou jurídicas?", "options": [ { "label": "Pessoas físicas", "value": "sim" }, { "label": "Pessoas jurídicas", "value": "nao" } ] },
+            "b": { "question": "Os devedores são pessoas físicas ou jurídicas?", "options": [ { "label": "Pessoas físicas", "value": "sim" }, { "label": "Pessoas jurídicas", "value": "nao" } ] },
+            "c": { "question": "Os devedores são pessoas físicas ou jurídicas?", "options": [ { "label": "Pessoas físicas", "value": "sim" }, { "label": "Pessoas jurídicas", "value": "nao" } ] }
+          }
+        },
+        "consultoria": {
+          "question": "A sua empresa possui departamento jurídico interno?",
+          "options": [
+            { "label": "Sim, mas precisa de apoio externo", "value": "a" },
+            { "label": "Não, terceirizamos totalmente", "value": "b" },
+            { "label": "Nunca tivemos assessoria jurídica", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há urgência na análise de algum risco específico?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Há urgência na análise de algum risco específico?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Há urgência na análise de algum risco específico?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    },
+    "Direito Trabalhista": {
+      "icon": "file-contract",
+      "question": "Qual é a sua posição na questão trabalhista?",
+      "options": [
+        { "label": "Sou trabalhador/empregado", "value": "empregado" },
+        { "label": "Sou empregador/empresário", "value": "empregador" },
+        { "label": "Prestador de serviços autônomo", "value": "autonomo" },
+        { "label": "Outra situação trabalhista", "value": "outro" }
+      ],
+      "next": {
+        "empregado": {
+          "question": "Qual é o principal motivo da sua consulta trabalhista?",
+          "options": [
+            { "label": "Rescisão e cálculo de verbas", "value": "a" },
+            { "label": "Horas extras não pagas", "value": "b" },
+            { "label": "Assédio ou condições inadequadas", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "O contrato de trabalho já foi encerrado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "O contrato de trabalho já foi encerrado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "O contrato de trabalho já foi encerrado?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "empregador": {
+          "question": "Qual é o foco da sua necessidade trabalhista preventiva?",
+          "options": [
+            { "label": "Defesa em reclamação trabalhista", "value": "a" },
+            { "label": "Auditoria de rotinas e contratos", "value": "b" },
+            { "label": "Homologação de acordos", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Já existe audiência designada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Já existe audiência designada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Já existe audiência designada na justiça?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "autonomo": {
+          "question": "Existe reconhecimento de vínculo empregatício pretendido?",
+          "options": [
+            { "label": "Sim, pretendo pleitear vínculo", "value": "a" },
+            { "label": "Apenas cobrança de honorários/serviços", "value": "b" },
+            { "label": "Dúvida sobre enquadramento legal", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Você possuía exclusividade e subordinação?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Você possuía exclusividade e subordinação?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Você possuía exclusividade e subordinação?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        },
+        "outro": {
+          "question": "A demanda envolve órgãos de fiscalização ou sindicato?",
+          "options": [
+            { "label": "Sim, fiscalização do Ministério do Trabalho", "value": "a" },
+            { "label": "Sim, negociação sindical", "value": "b" },
+            { "label": "Nenhum dos dois", "value": "c" }
+          ],
+          "next": {
+            "a": { "question": "Há prazos de defesa em curso?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "b": { "question": "Há prazos de defesa em curso?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] },
+            "c": { "question": "Há prazos de defesa em curso?", "options": [ { "label": "Sim", "value": "sim" }, { "label": "Não", "value": "nao" } ] }
+          }
+        }
+      }
+    }
+  }
+}

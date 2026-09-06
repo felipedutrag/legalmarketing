@@ -1,0 +1,38 @@
+{
+  "name": "advogados-landing",
+  "version": "1.0.0",
+  "description": "Landing page moderna para venda de sites para advogados",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "pipeline": "node scripts/pipeline.cjs",
+    "scraper": "node scripts/scrapers/scraper_advogado.cjs",
+    "gerar": "node scripts/generators/gerar_landing.cjs"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@upstash/redis": "^1.38.1",
+    "@vercel/functions": "^3.7.6",
+    "dotenv": "^17.4.2",
+    "next": "^14.2.0",
+    "puppeteer": "^25.4.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "terser": "^5.49.0",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "advogados",
+    "landing",
+    "nextjs"
+  ],
+  "author": "",
+  "license": "MIT"
+}
