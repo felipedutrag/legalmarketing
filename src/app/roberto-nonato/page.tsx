@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackLead } from '@/lib/tracking'
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513988127048'
 
@@ -8,13 +9,7 @@ export default function RobertoNonatoLanding() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0)
 
   const openWhatsApp = (message: string) => {
-    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18263949464/25oBCIi71dgcEJiB94RE',
-        'value': 1.0,
-        'currency': 'BRL',
-      })
-    }
+    trackLead('WhatsApp Roberto Nonato CTA')
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
     window.open(url, '_blank', 'noopener,noreferrer')
   }
@@ -454,6 +449,7 @@ export default function RobertoNonatoLanding() {
         rel="noopener noreferrer"
         className="whatsapp-btn"
         aria-label="Falar com Dr. Roberto Nonato no WhatsApp"
+        onClick={() => trackLead('WhatsApp Roberto Nonato Floating')}
       >
         <span className="whatsapp-btn__icon" aria-hidden="true">
           <svg viewBox="0 0 24 24">

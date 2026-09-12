@@ -24,6 +24,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="reddit-pixel" strategy="afterInteractive">
           {`!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_jo82q4y3vyus",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_jo82q4y3vyus');rdt('track', 'PageVisit');`}
         </Script>
+        <Script id="whatsapp-lead-tracker" strategy="afterInteractive">
+          {`
+            (function() {
+              document.addEventListener('click', function(e) {
+                var el = e.target;
+                while (el && el !== document) {
+                  var isWa = (el.tagName === 'A' && el.href && (el.href.indexOf('wa.me') !== -1 || el.href.indexOf('whatsapp.com') !== -1)) ||
+                             (el.classList && el.classList.contains('whatsapp-btn'));
+                  if (isWa) {
+                    var now = Date.now();
+                    if (!window.__lastLeadTrackedTime || (now - window.__lastLeadTrackedTime > 500)) {
+                      window.__lastLeadTrackedTime = now;
+                      if (typeof window.rdt === 'function') {
+                        window.rdt('track', 'Lead');
+                      }
+                      if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'conversion', {
+                          'send_to': 'AW-18263949464/25oBCIi71dgcEJiB94RE',
+                          'value': 1.0,
+                          'currency': 'BRL'
+                        });
+                        window.gtag('event', 'generate_lead', {
+                          'event_category': 'engagement',
+                          'event_label': 'WhatsApp Click'
+                        });
+                      }
+                    }
+                    break;
+                  }
+                  el = el.parentNode;
+                }
+              }, true);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   )

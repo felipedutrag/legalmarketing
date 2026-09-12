@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { trackLead } from '@/lib/tracking'
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513988127048'
 
@@ -18,6 +19,7 @@ export default function WhatsAppBtn() {
       rel="noopener noreferrer"
       className="whatsapp-btn"
       aria-label="Falar no WhatsApp"
+      onClick={() => trackLead('WhatsApp Floating Button')}
     >
       <span className="whatsapp-btn__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24">
@@ -31,13 +33,7 @@ export default function WhatsAppBtn() {
 }
 
 export function sendToWhatsApp(message: string) {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18263949464/25oBCIi71dgcEJiB94RE',
-      'value': 1.0,
-      'currency': 'BRL',
-    })
-  }
+  trackLead('WhatsApp CTA')
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
   window.open(url, '_blank', 'noopener,noreferrer')
 }

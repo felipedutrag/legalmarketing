@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+import { trackLead } from '@/lib/tracking'
 
 // --- COMPONENTE DA BARRA DE PROGRESSO E BULLETS ---
 interface ProgressBarProps {
@@ -340,11 +341,8 @@ function renderSlideContent(slide: { id: number; type: string; content: React.Re
 }
 
 function sendWhatsApp(message: string) {
+  trackLead('WhatsApp Deck CTA')
   const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513988658518'
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
   window.open(url, '_blank', 'noopener,noreferrer')
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    // @ts-ignore
-    window.gtag('event', 'conversion', { 'send_to': 'AW-18263949464/25oBCIi71dgcEJiB94RE', 'value': 1.0, 'currency': 'BRL' })
-  }
 }
