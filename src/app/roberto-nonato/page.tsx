@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { trackLead } from '@/lib/tracking'
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513988127048'
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513988658518'
 
 export default function RobertoNonatoLanding() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0)
