@@ -1,0 +1,259 @@
+.carouselSection {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 32px 60px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 24px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #a3b5a6;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.eyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a9ca8d;
+  box-shadow: 0 0 0 4px #a9ca8d1c;
+}
+
+.heading {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: #edf5ec;
+  margin: 0 0 10px;
+}
+
+.heading em {
+  font-style: italic;
+  color: #acc8a9;
+}
+
+.subheading {
+  color: #9eb0a2;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 580px;
+}
+
+.navControls {
+  display: flex;
+  gap: 10px;
+}
+
+.navBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #15221b;
+  border: 1px solid #2d4233;
+  color: #d1e2d4;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.navBtn:hover {
+  background: #25392d;
+  border-color: #4a6c53;
+  transform: scale(1.05);
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 4px 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselCard {
+  flex: 0 0 360px;
+  scroll-snap-align: start;
+  background: linear-gradient(160deg, #16241e 0%, #0f1814 100%);
+  border: 1px solid #24362b;
+  border-radius: 10px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 16px 40px #00000045, inset 0 1px 0 #52755e20;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.carouselCard:hover {
+  transform: translateY(-3px);
+  border-color: #3f634b;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.areaBadge {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #c4e4a6;
+  background: #1b2920;
+  border: 1px solid #2d4434;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.readingTime {
+  color: #7d8f82;
+  font-size: 10px;
+}
+
+.cardTitle {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 14px;
+  letter-spacing: -0.3px;
+}
+
+.cardTitle a {
+  color: #edf4ed;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.cardTitle a:hover {
+  color: #c3e8a5;
+}
+
+.summaryBox {
+  background: #0d1511;
+  border: 1px solid #1a271f;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: #b5cca5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.aiDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #9ab550;
+}
+
+.summaryText {
+  color: #aebfb1;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardBottom {
+  margin-top: auto;
+  border-top: 1px solid #1c2a21;
+  padding-top: 14px;
+}
+
+.readLink {
+  color: #a3c79c;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s, gap 0.15s;
+}
+
+.readLink:hover {
+  color: #cbf0b9;
+  gap: 8px;
+}
+
+.bottomCtaRow {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1b2b22;
+  border: 1px solid #36503e;
+  color: #d8eadc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.viewAllBtn:hover {
+  background: #253d2f;
+  border-color: #4f785b;
+}
+
+.viewAllBtn span {
+  color: #a8d984;
+}
+
+@media (max-width: 680px) {
+  .carouselSection {
+    padding: 70px 20px 40px;
+  }
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navControls {
+    display: none;
+  }
+  .carouselCard {
+    flex: 0 0 290px;
+  }
+}
