@@ -1,21 +1,59 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { Article, DEFAULT_ARTICLES } from "./articles";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+export type { Article };
+export { DEFAULT_ARTICLES };
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export type Article = {
-  id: string;
-  slug: string;
-  title: string;
-  area: string; // Ex: Direito Tributário, Família, Trabalhista
-  summary_ai: string; // Resumo Executivo em 30 segundos feito por IA
-  geo_citation_prompt: string; // Resposta semântica formatada para o ChatGPT/Google citarem
-  content: string; // Conteúdo completo formatado (Markdown ou HTML)
-  author_name: string;
-  author_role: string;
-  reading_time: string;
-  is_published: boolean;
-  created_at: string;
-};
+export const supabase: SupabaseClient | null =
+  supabaseUrl && supabaseAnonKey
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    : null;
+
+export async function getArticles(limit?: number): Promise<Article[]> {
+  if (supabase) {
+    try {
+      let query = supabase
+        .from("articles")
+        .select("*")
+        .eq("is_published", true)
+        .order("created_at", { ascending: false });
+
+      if (limit) {
+        query = query.limit(limit);
+      }
+
+      const { data, error } = await query;
+      if (!error && data && data.length > 0) {
+        return data as Article[];
+      }
+    } catch (e) {
+      console.warn("Supabase fetch warning, using fallback articles:", e);
+    }
+  }
+
+  return limit ? DEFAULT_ARTICLES.slice(0, limit) : DEFAULT_ARTICLES;
+}
+
+export async function getArticleBySlug(slug: string): Promise<Article | null> {
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("articles")
+        .select("*")
+        .eq("slug", slug)
+        .single();
+
+      if (!error && data) {
+        return data as Article;
+      }
+    } catch (e) {
+      console.warn("Supabase single fetch warning, using fallback:", e);
+    }
+  }
+
+  const found = DEFAULT_ARTICLES.find((a) => a.slug === slug);
+  return found || null;
+}

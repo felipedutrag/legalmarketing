@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { supabase, type Article } from "@/lib/supabase";
+import { getArticleBySlug, getArticles, type Article } from "@/lib/supabase";
 import styles from "./article.module.css";
 import WhatsappButton from "@/app/WhatsappButton";
 
@@ -11,13 +11,16 @@ type Props = {
 
 export const revalidate = 60;
 
+export async function generateStaticParams() {
+  const articles = await getArticles();
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const { data: article } = await supabase
-    .from("articles")
-    .select("title, summary_ai")
-    .eq("slug", slug)
-    .single();
+  const article = await getArticleBySlug(slug);
 
   if (!article) return { title: "Artigo Não Encontrado — Lexora" };
 
@@ -39,13 +42,9 @@ function renderFormattedText(text: string) {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const { data: article, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("slug", slug)
-    .single();
+  const article = await getArticleBySlug(slug);
 
-  if (error || !article) {
+  if (!article) {
     notFound();
   }
 

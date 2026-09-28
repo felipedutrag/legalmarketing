@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import styles from "./page.module.css";
 import WhatsappButton from "./WhatsappButton";
 import ArticlesCarousel from "./ArticlesCarousel";
-import { supabase, type Article } from "@/lib/supabase";
+import { getArticles } from "@/lib/supabase";
 
 export const metadata: Metadata = {
   title: "Lexora — Infraestrutura de Citação e Autoridade Jurídica no Google e IAs",
@@ -71,16 +71,7 @@ function ArrowIcon() {
 }
 
 export default async function Home() {
-  const { data: articles, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("is_published", true)
-    .order("created_at", { ascending: false })
-    .limit(6);
-
-  if (error) {
-    console.error("Erro ao buscar artigos para a Home:", error);
-  }
+  const articles = await getArticles(6);
 
   return (
     <main className={styles.page}>

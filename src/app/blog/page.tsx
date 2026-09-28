@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { supabase, type Article } from "@/lib/supabase";
+import { getArticles, type Article } from "@/lib/supabase";
 import styles from "./blog.module.css";
 import WhatsappButton from "../WhatsappButton";
 
@@ -13,11 +13,7 @@ export const metadata: Metadata = {
 export const revalidate = 60; // Revalida a cada 60 segundos
 
 export default async function BlogIndexPage() {
-  const { data: articles, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("is_published", true)
-    .order("created_at", { ascending: false });
+  const articles = await getArticles();
 
   return (
     <main className={styles.blogPage}>
@@ -48,7 +44,7 @@ export default async function BlogIndexPage() {
       </section>
 
       <section className={styles.articlesGrid}>
-        {error || !articles || articles.length === 0 ? (
+        {!articles || articles.length === 0 ? (
           <div className={styles.emptyState}>
             <p>Nenhum artigo encontrado no acervo no momento.</p>
           </div>
